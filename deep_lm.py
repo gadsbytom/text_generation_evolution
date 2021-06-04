@@ -65,19 +65,9 @@ model.add(Dense(y.shape[1], activation="softmax"))
 model.compile(loss="categorical_crossentropy", optimizer="adam", metrics=["accuracy"])
 
 # save best version of the model
-filepath = f"best_weights.hdf5"
-early_stop = EarlyStopping(
-    monitor="val_loss", mode="min", verbose=1, patience=15, min_delta=0.0001
-)
-checkpoint = ModelCheckpoint(
-    filepath,
-    monitor="val_loss",
-    verbose=1,
-    save_best_only=True,
-    save_weights_only=True,
-    mode="max",
-)
-callbacks = [early_stop, checkpoint]
+filepath="weights-improvement-{epoch:02d}-{loss:.4f}.hdf5"
+checkpoint = ModelCheckpoint(filepath, monitor='accuracy', verbose=1, save_best_only=True, mode='min')
+callbacks = [checkpoint]
 
 # fit the model
-model.fit(X, y, epochs=20, batch_size=512, validation_split=0.2, callbacks=callbacks)
+model.fit(X, y, epochs=20, batch_size=256, validation_split=0.2, callbacks=callbacks)
