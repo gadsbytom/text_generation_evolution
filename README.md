@@ -6,4 +6,4 @@ Text generation based on tri-gram Markov Chains and bi-directional LSTMs.
 * LSTM with Trainable Embeddings model
 
 ### How to use:
-* Run all code in jupyter notebook `LM_text_gen_traditional\&deep.ipynb`
+* Run all code in jupyter notebook `LM_text_generation.ipynb`
