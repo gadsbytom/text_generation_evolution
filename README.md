@@ -1,8 +1,8 @@
 # Text generation
-Text generation based on tri-gram Markov Chains and bi-directional LSTMs.
+Text generation based on n-gram Markov Chains and bi-directional LSTMs.
 
 ## Contents:
-* Markov based trigram language model
+* Markov based n-gram (trigram) language model
 * LSTM with Trainable Embeddings model
 
 ### How to use:
