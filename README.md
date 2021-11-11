@@ -1,5 +1,5 @@
 # Text generation
-A Text generation system based on n-gram Markov Chains and bi-directional LSTMs.
+Comparison of text generation systems based on n-gram Markov Chains and bi-directional LSTMs.
 
 ## Contents:
 * Markov based n-gram (trigram) language model
